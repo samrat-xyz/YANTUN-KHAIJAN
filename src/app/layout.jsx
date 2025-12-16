@@ -1,7 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import CartProvider from "@/context/CartProvider";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +13,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const serif = Noto_Serif({
+  weight:"400",
+  subsets:["latin"]
+})
 
 export const metadata = {
   title: {
@@ -25,11 +31,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${serif.className} antialiased`}
       >
         <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
           <Link href="/">
-            <img src="/logo.png" alt="" className="w-[120px]" />
+            <Image src="/logo.png" alt="" className="w-[120px]" width={300} height={100} />
           </Link>
 
           <div className="space-x-5">

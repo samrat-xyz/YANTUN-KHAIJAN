@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ReviewCard({ review }) {
@@ -13,18 +14,20 @@ export default function ReviewCard({ review }) {
   };
 
   return (
-    <div className="border rounded-xl p-5 shadow-md bg-white hover:shadow-lg transition">
+    <div className="border rounded-xl p-5 shadow-md  hover:shadow-lg transition">
       {/* User Info */}
       <div className="flex items-center gap-4">
-        <img
+        <Image
           src={photo}
           alt={user}
           className="w-14 h-14 rounded-full object-cover border"
+          width={300}
+          height={300}
         />
 
         <div>
           <h3 className="font-semibold text-lg">{user}</h3>
-          <p className="text-gray-600 text-sm">{email}</p>
+          <p className="text-gray-900 text-sm">{email}</p>
         </div>
       </div>
 
@@ -59,7 +62,7 @@ export default function ReviewCard({ review }) {
           className={`px-4 py-2 rounded-lg text-sm font-medium border transition ${
             isLiked
               ? "bg-blue-600 text-white border-blue-600"
-              : "bg-gray-50 hover:bg-gray-100 border-gray-300"
+              : " border-gray-300"
           }`}
         >
           {isLiked ? "Liked ❤️" : "Like 🤍"}
