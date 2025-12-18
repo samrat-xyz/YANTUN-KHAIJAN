@@ -32,7 +32,7 @@ const Page = async ({ params }) => {
   const { id } = await params;
   const food = await getSingleFood(id);
 
-  if (!food) {
+  if (!food.title) {
     return (
       <div className="text-center py-20 text-xl font-semibold">
         Food not found ❌
