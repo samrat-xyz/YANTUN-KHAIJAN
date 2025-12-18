@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const getFeedbacks = async () => {
-  const res = await fetch('/api/feedback', {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_server}/api/feedback`, {
     cache: 'no-store',
   })
   return res.json()
