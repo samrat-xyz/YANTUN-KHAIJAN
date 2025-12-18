@@ -10,6 +10,7 @@ This project is created for **learning Next.js**. In this project, I practiced v
 - Search query
 - Api  
 - Mongodb
+- env
 ##  Technologies Used
 - Next.js
 - Tailwind CSS

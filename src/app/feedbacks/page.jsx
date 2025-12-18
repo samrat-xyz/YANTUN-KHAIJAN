@@ -4,7 +4,7 @@ import React from 'react'
 
 
 const getFeedbacks = async() =>{
-  const res = await fetch("http://localhost:3000/api/feedback")
+  const res = await fetch(`${process.env.NEXT_PUBLIC_server}/api/feedback`)
   const data = await res.json()
   return data
 }

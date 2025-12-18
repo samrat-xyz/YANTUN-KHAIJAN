@@ -1,6 +1,6 @@
 export function ReviewCardSkeleton() {
   return (
-    <div className="border rounded-xl p-5 shadow-md bg-white animate-pulse">
+    <div className="border rounded-xl p-5 shadow-md  animate-pulse">
       {/* User Info */}
       <div className="flex items-center gap-4">
         <div className="w-14 h-14 bg-gray-300 rounded-full"></div>

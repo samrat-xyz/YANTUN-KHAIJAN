@@ -12,7 +12,7 @@ function FeedbackForm() {
       rating,
       message,
     };
-    fetch("http://localhost:3000/api/feedback", {
+    fetch(`${process.env.NEXT_PUBLIC_server}/api/feedback`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
