@@ -33,20 +33,30 @@ export default function RootLayout({ children }) {
       <body
         className={`${serif.className} antialiased`}
       >
-        <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
-          <Link href="/">
-            <Image src="/logo.png" alt="" className="w-[120px]" width={300} height={100} />
-          </Link>
+        <header className="px-5 py-2 flex flex-wrap items-center justify-between gap-5 bg-stone-800">
+  <Link href="/">
+    <Image
+      src="/logo.png"
+      alt=""
+      className="w-[120px]"
+      width={300}
+      height={100}
+    />
+  </Link>
 
-          <div className="space-x-5">
-            <Link className="btn" href="/foods">
-              Food
-            </Link>
-            <Link className="btn" href="/reviews">
-              Reviews
-            </Link>
-          </div>
-        </header>
+  <div className="flex flex-wrap gap-3 justify-center sm:justify-end w-full sm:w-auto">
+    <Link className="btn" href="/foods">
+      Food
+    </Link>
+    <Link className="btn" href="/reviews">
+      Reviews
+    </Link>
+    <Link className="btn" href="/feedbacks">
+      Feed Backs
+    </Link>
+  </div>
+</header>
+
 
         <main className="px-5 py-8">
           <CartProvider>{children}</CartProvider>

@@ -9,7 +9,7 @@ This project is created for **learning Next.js**. In this project, I practiced v
 - Component Structure  
 - Search query
 - Api  
-
+- Mongodb
 ##  Technologies Used
 - Next.js
 - Tailwind CSS
