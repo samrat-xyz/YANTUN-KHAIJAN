@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +11,10 @@ export default function Home() {
         </h2>
       </div>
       <div className="">
+        <Link href='/foods'>
+        
         <button className="btn">Lets Explore</button>
+        </Link>
       </div>
     </div>
   );
