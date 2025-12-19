@@ -27,12 +27,9 @@ export default function FoodCard({ food }) {
         <div className="flex gap-3 mt-4">
           <CartButton food={food}></CartButton>
 
-          <Link
-            href={`/foods/${id}`}
-            className="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-100"
-          >
-            View Details
-          </Link>
+          <button className="flex-1 border border-gray-300 py-2 rounded-lg hover:bg-gray-100">
+            <Link href={`/foods/${id}`}>View Details</Link>
+          </button>
         </div>
       </div>
     </div>
